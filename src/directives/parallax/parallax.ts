@@ -12,7 +12,7 @@ export class ParallaxDirective {
   main_cnt:any
   ta:any
   constructor(public el:ElementRef, public re:Renderer) {}
-
+  /* new */
 
   ngOnInit() {
     let cnt = this.el.nativeElement.getElementsByClassName('scroll-content')[0];
