@@ -39,3 +39,4 @@ $ ionic run android/ios
 ```
 
 If you want to see the logs of your app that is running on real device you need to write this URL in your chrome browser. `chrome://inspect/devices#devices` but make sure that your device is connected to you PC and usb debugging is on in settigs.
+# ionic-odoo

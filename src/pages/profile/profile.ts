@@ -1,6 +1,6 @@
 import { LoginPage } from '../login/login';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams } from 'ionic-angular';
 import { OdooJsonRpc } from '../../services/odoojsonrpc';
 import { Utils } from '../../services/utils';
 
@@ -90,7 +90,7 @@ export class ProfilePage {
     }
   }
 
-  logout() {
+  /* logout() {
     this.utils.presentAlert("Logout", "Are you sure! You really want to logged out", [{
       text: "Cancel"
     },
@@ -102,6 +102,6 @@ export class ProfilePage {
         this.navCtrl.setRoot(LoginPage);
       }
     }])
-  }
+  } */
 
 }

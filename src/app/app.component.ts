@@ -4,7 +4,6 @@ import { OdooJsonRpc } from '../services/odoojsonrpc';
 import { Component } from '@angular/core';
 import { AlertController, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
-import { Network } from '@ionic-native/network';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Utils } from '../services/utils';
 
@@ -20,7 +19,7 @@ export class MyApp {
     splashScreen: SplashScreen,
     public odooRpc: OdooJsonRpc,
     public alert: AlertController,
-    private network: Network) {
+    ) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();

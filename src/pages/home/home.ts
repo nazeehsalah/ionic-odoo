@@ -1,9 +1,9 @@
 import { AddCustomerPage } from '../add-customer/add-customer';
 import { Utils } from '../../services/utils';
-import { ViewPage } from '../view/view';
-import { OdooJsonRpc } from '../../services/odoojsonrpc';
+/* import { ViewPage } from '../view/view';
+ */import { OdooJsonRpc } from '../../services/odoojsonrpc';
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { Network } from '@ionic-native/network';
 import { ProfilePage } from '../profile/profile';
 
@@ -40,10 +40,10 @@ export class HomePage {
 
   constructor(private navCtrl: NavController,
     private odooRpc: OdooJsonRpc,
-    private alertCtrl: AlertController,
-    private network: Network,
-    private alert: AlertController,
-    private utils: Utils) { }
+/*     private alertCtrl: AlertController,
+ */    /* private network: Network, */
+/*     private alert: AlertController,
+ */    /* private utils: Utils */) { }
 
   ionViewDidLoad() {
     this.display()
@@ -80,12 +80,12 @@ export class HomePage {
     }
   }
 
-  private view(idx: number): void {
+ /*  private view(idx: number): void {
     let params = {
       "id": this.partnerArray[idx].id
     }
     this.navCtrl.push(ViewPage, params)
-  }
+  } */
 
   initializeItems(): void {
     this.partnerArray = this.items;
@@ -117,12 +117,12 @@ export class HomePage {
   }
 
 
-  private delete(idx: number) {
+ /*  private delete(idx: number) {
     this.odooRpc.deleteRecord(this.partner, this.partnerArray[idx].id)
     this.utils.presentToast(this.partnerArray[idx].name + " Deleted Successfully", 2000, true, "top")
     this.partnerArray.splice(idx, 1)
   }
-
+ */
   viewProfile(): void {
     this.navCtrl.push(ProfilePage)
   }

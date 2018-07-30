@@ -1,7 +1,7 @@
 import { HomePage } from '../home/home';
 import { OdooJsonRpc } from '../../services/odoojsonrpc';
 import { Component } from '@angular/core';
-import { AlertController, IonicPage, Loading, LoadingController, NavController, NavParams } from 'ionic-angular';
+import { AlertController, LoadingController, NavController, NavParams } from 'ionic-angular';
 import { Utils } from "../../services/utils";
 
 @Component({
@@ -24,8 +24,8 @@ export class LoginPage {
   private password
 
   constructor(public navCtrl: NavController,
-    private alert: AlertController, public navParams: NavParams,
-    private odooRpc: OdooJsonRpc, private loadingCtrl: LoadingController,
+     public navParams: NavParams,
+    private odooRpc: OdooJsonRpc, 
     private utils: Utils) {
 
     this.listForProtocol.push({

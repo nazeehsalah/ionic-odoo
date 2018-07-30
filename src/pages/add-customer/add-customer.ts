@@ -32,7 +32,7 @@ export class AddCustomerPage {
       website:this.website
     }
 
-    this.odooRpc.createRecord(model,params).then((res:any)=>{
+    this.odooRpc.createRecord(model,params).then(()=>{
       this.utils.presentToast("User added successfully",1000,false,'top')
       this.navCtrl.pop()
     }).catch((err:any)=>{
